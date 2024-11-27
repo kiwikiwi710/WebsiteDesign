@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>JavaScript Examples</title>
+<style type="text/css">
+body {
+background: linear-gradient(to right, #000, #030, #000);
+}
+#content {
+background-color: ivory;
+width: 800px;
+margin: 20px auto;
+padding: 20px;
+border: 3px solid #ccc;
+}
+#sp1 {
+color: DarkGreen;
+}
+#tbl1 {
+margin: 10px auto;
+width: 600px;
+border: 2px solid orange;
+}
+#tbl1 tr {
+height: 30px;
+}
+#tbl1 td {
+border: 2px solid green;
+}
+</style>
+<!-- 
+1. 利用document.getElementById("")在程式中產生相對應之element。
+2. 利用element的innerHTML取得或設定網頁內容。
+3. 學習如何自訂function。($(id), insertRow(table), clear(ele),...)
+4. 將function等相關程式移至外部檔案func.js，再設定<script ... src="func.js">予以引用。
+5. 學習Date()物件之使用，在網頁中顯示今天日期，並利用array技巧，將星期數字轉為中文。
+   https://ycchen.im.ncnu.edu.tw/www2011/lab/date.html
+6. 學習如何設定事件及處理函式。
+7. 學習如何取得表單元件內容。
+-->
+
+<!-- 呼叫func.js裡面的subfunction -->
+<script type="text/javascript" src="func.js" ></script>
+
+<script type="text/javascript">
+   var hw="hello world 1!!!!!!!"
+   console.log(hw);
+   window.onload=function() {
+      alert(document.getElementById("hh1").innerHTML);
+      $("hh1").innerHTML=hw;
+   };
+   
+   /*function $(id){
+      return document.getElementById(id);
+   }*/
+   </script>
+</head>
+<body>
+<div id="content">
+<h1 id="hh1">Heading 1</h1>
+<p id="p1" >There is a <span id="sp1">span</span> and a paragraph here.</p>
+<table id="tbl1">
+<caption>Table Caption</caption>
+<tr><td> </td><td> </td></tr>
+<tr><td> </td><td> </td></tr>
+</table>
+<br/>
+<form id="f1" method="post" action="https://ycchen.im.ncnu.edu.tw/join.php">
+<input type="text" id="txt1" name="txt1">
+<input type="submit"> 
+<input type="reset"><br/><br/>
+</form>
+<button id="btn1">Button 1</button>
+</div>
+</body>
+</html>

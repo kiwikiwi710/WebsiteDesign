@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="keywords" content=" " />
+<meta name="description" content=" " />
+<title>form title</title>
+</head>
+<body>
+<h1>sport club membership</h1>
+<form method="get" action="https://ycchen.im.ncnu.edu.tw/join.php">
+    User name:&nbsp;
+    <input type="text" name="uid" placeholder="your name"/><br/>
+    Password:&nbsp;
+    <input type="password" name="pwd" placeholder="your password"><br/>
+    Sports:&nbsp;
+    <!-- check表示預先勾選  []是處理server端如果複選不被覆蓋的用法 -->
+    <input type="checkbox" id="basketball" name="basketball[]" value="basketball" /> basketball
+    <input type="checkbox" id="badminton" name="badminton[]" value="badminton" checked /> badminton
+    <input type="checkbox" id="baseball" name="baseball[]"  value="baseball" /> baseball<br/>
+    gender:
+        <input type="radio" id="female" name="sex" value="female"   />female
+        <input type="radio" id="male" name="sex" value="male" />male<br/>
+    birth Year: 
+        <select id="year" name="year">
+        <option>2009</option>
+        <option value="2010">2010</option>
+        <option selected>2011</option>
+        <option >2012</option>
+        </select><br/>
+    <br/><input  type="reset" value="reset"/><br/>
+    <input  type="submit" value="OK"/>
+</form>
+</body>
+</html>
